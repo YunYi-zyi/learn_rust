@@ -2,6 +2,7 @@
 pub mod conditionals;
 pub mod functions;
 pub mod loops;
+pub mod ownership;
 pub mod strings;
 pub mod variables;
 
@@ -9,6 +10,7 @@ pub mod variables;
 pub use conditionals::run as run_conditionals;
 pub use functions::run as run_functions;
 pub use loops::run as run_loops;
+pub use ownership::run as run_ownership;
 pub use strings::run as run_strings;
 pub use variables::run as run_variables;
 
@@ -19,6 +21,7 @@ pub const EXERCISES: &[(&str, &str)] = &[
     ("3", "循环结构 (Loops)"),
     ("4", "函数定义 (Functions)"),
     ("5", "条件语句 (Conditionals)"),
+    ("6", "所有权（Ownership）"),
 ];
 
 // 根据选择运行对应的练习
@@ -42,6 +45,10 @@ pub fn run_exercise(choice: &str) -> bool {
         }
         "5" => {
             run_conditionals();
+            true
+        }
+        "6" => {
+            run_ownership();
             true
         }
         _ => false,
