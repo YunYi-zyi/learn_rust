@@ -47,11 +47,7 @@ cargo --version
 
 ```bash
 # 克隆项目（如果从 GitHub 获取）
-<<<<<<< HEAD
-git clone <repository-url>
-=======
 git clone https://github.com/YunYi-zyi/learn_rust.git
->>>>>>> 7ebf2e87a7ffc5573d5066206a52304ce13d254a
 cd learn_rust
 
 # 编译并运行交互式学习系统
@@ -73,6 +69,8 @@ cargo test
 | 3    | 循环结构 (Loops)                   | `src/exercises/loops.rs`        | ✅   |
 | 4    | 函数定义 (Functions)               | `src/exercises/functions.rs`    | ✅   |
 | 5    | 条件语句 (Conditionals)            | `src/exercises/conditionals.rs` | ✅   |
+| 6    | 所有权（Ownership）                | `src/exercises/ownership.rs`    | ✅   |
+| 7    | 结构体和枚举 (Structs)              | `src/exercises/structlearn.rs`  | ✅   |
 
 ## ➕ 如何添加新练习
 
