@@ -4,6 +4,7 @@ pub mod functions;
 pub mod loops;
 pub mod ownership;
 pub mod strings;
+pub mod structlearn;
 pub mod variables;
 
 // 导出所有练习的运行函数
@@ -12,6 +13,7 @@ pub use functions::run as run_functions;
 pub use loops::run as run_loops;
 pub use ownership::run as run_ownership;
 pub use strings::run as run_strings;
+pub use structlearn::run as run_struct;
 pub use variables::run as run_variables;
 
 // 练习列表，用于菜单显示
@@ -22,6 +24,7 @@ pub const EXERCISES: &[(&str, &str)] = &[
     ("4", "函数定义 (Functions)"),
     ("5", "条件语句 (Conditionals)"),
     ("6", "所有权（Ownership）"),
+    ("7", "结构体(struct)"),
 ];
 
 // 根据选择运行对应的练习
@@ -49,6 +52,10 @@ pub fn run_exercise(choice: &str) -> bool {
         }
         "6" => {
             run_ownership();
+            true
+        }
+        "7" => {
+            run_struct();
             true
         }
         _ => false,
