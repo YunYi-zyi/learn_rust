@@ -70,7 +70,7 @@ cargo test
 | 4    | 函数定义 (Functions)               | `src/exercises/functions.rs`    | ✅   |
 | 5    | 条件语句 (Conditionals)            | `src/exercises/conditionals.rs` | ✅   |
 | 6    | 所有权（Ownership）                | `src/exercises/ownership.rs`    | ✅   |
-| 7    | 结构体 (Structs)              | `src/exercises/structlearn.rs`  | ✅   |
+| 7    | 结构体 (Structs)                   | `src/exercises/structlearn.rs`  | ✅   |
 
 ## ➕ 如何添加新练习
 
@@ -256,6 +256,7 @@ pub fn run() {
 - [Rust Playground](https://play.rust-lang.org/)
 - [Rustlings](https://github.com/rust-lang/rustlings)
 - [Rust by Practice](https://practice.rs/)
+
 ## 🤝 贡献指南
 
 欢迎贡献新的练习或改进现有内容！
