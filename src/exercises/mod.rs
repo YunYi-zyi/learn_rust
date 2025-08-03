@@ -3,6 +3,7 @@ pub mod conditionals;
 pub mod enums;
 pub mod functions;
 pub mod loops;
+pub mod matchln;
 pub mod ownership;
 pub mod strings;
 pub mod structlearn;
@@ -13,6 +14,7 @@ pub use conditionals::run as run_conditionals;
 pub use enums::run as run_enums;
 pub use functions::run as run_functions;
 pub use loops::run as run_loops;
+pub use matchln::run as run_match;
 pub use ownership::run as run_ownership;
 pub use strings::run as run_strings;
 pub use structlearn::run as run_struct;
@@ -28,6 +30,7 @@ pub const EXERCISES: &[(&str, &str)] = &[
     ("6", "所有权（Ownership）"),
     ("7", "结构体(struct)"),
     ("8", "枚举 (Enums)"),
+    ("9", "模式匹配 (Pattern Matching)"),
 ];
 
 // 根据选择运行对应的练习
@@ -63,6 +66,10 @@ pub fn run_exercise(choice: &str) -> bool {
         }
         "8" => {
             run_enums();
+            true
+        }
+        "9" => {
+            run_match();
             true
         }
         _ => false,
