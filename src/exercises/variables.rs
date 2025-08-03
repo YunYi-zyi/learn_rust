@@ -5,46 +5,46 @@ pub fn run() {
     // 1. 不可变变量
     println!("\n1. 不可变变量:");
     let x = 5;
-    println!("x 的值是: {}", x);
+    println!("x 的值是: {x}");
 
     // 2. 可变变量
     println!("\n2. 可变变量:");
     let mut y = 10;
-    println!("y 的初始值: {}", y);
+    println!("y 的初始值: {y}");
     y = 20;
-    println!("y 的新值: {}", y);
+    println!("y 的新值: {y}");
 
     // 3. 常量
     println!("\n3. 常量:");
     const MAX_POINTS: u32 = 100_000;
-    println!("最大分数: {}", MAX_POINTS);
+    println!("最大分数: {MAX_POINTS}");
 
     // 4. 变量遮蔽(Shadowing)
     println!("\n4. 变量遮蔽:");
     let z = 5;
-    println!("z 的第一个值: {}", z);
+    println!("z 的第一个值: {z}");
 
     let z = z + 1;
-    println!("z 的第二个值: {}", z);
+    println!("z 的第二个值: {z}");
 
     {
         let z = z * 2;
-        println!("内部作用域中 z 的值: {}", z);
+        println!("内部作用域中 z 的值: {z}");
     }
 
-    println!("外部作用域中 z 的值: {}", z);
+    println!("外部作用域中 z 的值: {z}");
 
     // 5. 类型转换
     println!("\n5. 类型转换:");
     let spaces = "   ";
     let spaces = spaces.len();
-    println!("字符串的长度: {}", spaces);
+    println!("字符串的长度: {spaces}");
 
     // 6. 元组解构
     println!("\n6. 元组解构:");
     let tup = (500, 6.4, 1);
     let (x, y, z) = tup;
-    println!("元组解构: x={}, y={}, z={}", x, y, z);
+    println!("元组解构: x={x}, y={y}, z={z}");
 
     // 7. 数组
     println!("\n7. 数组:");

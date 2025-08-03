@@ -18,7 +18,7 @@ pub fn run() {
     };
     println!("{r}");
     let a = area(&r); //使用函数
-    println!("长方形的面积为：{}（使用函数）", a);
+    println!("长方形的面积为：{a}（使用函数）");
     println!("长方形的面积为：{}（使用方法）", r.area_self());
 }
 

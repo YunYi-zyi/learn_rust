@@ -1,5 +1,6 @@
 // 练习模块
 pub mod conditionals;
+pub mod enums;
 pub mod functions;
 pub mod loops;
 pub mod ownership;
@@ -9,6 +10,7 @@ pub mod variables;
 
 // 导出所有练习的运行函数
 pub use conditionals::run as run_conditionals;
+pub use enums::run as run_enums;
 pub use functions::run as run_functions;
 pub use loops::run as run_loops;
 pub use ownership::run as run_ownership;
@@ -25,6 +27,7 @@ pub const EXERCISES: &[(&str, &str)] = &[
     ("5", "条件语句 (Conditionals)"),
     ("6", "所有权（Ownership）"),
     ("7", "结构体(struct)"),
+    ("8", "枚举 (Enums)"),
 ];
 
 // 根据选择运行对应的练习
@@ -56,6 +59,10 @@ pub fn run_exercise(choice: &str) -> bool {
         }
         "7" => {
             run_struct();
+            true
+        }
+        "8" => {
+            run_enums();
             true
         }
         _ => false,

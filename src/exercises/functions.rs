@@ -14,10 +14,10 @@ pub fn run() {
     // 3. 有返回值的函数
     println!("\n3. 有返回值的函数:");
     let x = five();
-    println!("five() 返回: {}", x);
+    println!("five() 返回: {x}");
 
     let result = plus_one(5);
-    println!("plus_one(5) 返回: {}", result);
+    println!("plus_one(5) 返回: {result}");
 
     // 4. 函数表达式
     println!("\n4. 函数表达式:");
@@ -25,15 +25,15 @@ pub fn run() {
         let x = 3;
         x + 1 // 注意没有分号，这是表达式
     };
-    println!("表达式块的值: {}", y);
+    println!("表达式块的值: {y}");
 
     // 5. 多个参数的函数
     println!("\n5. 多个参数的函数:");
     let sum = add(10, 20);
-    println!("add(10, 20) = {}", sum);
+    println!("add(10, 20) = {sum}");
 
     let product = multiply(4, 7);
-    println!("multiply(4, 7) = {}", product);
+    println!("multiply(4, 7) = {product}");
 
     // 6. 函数作为参数
     println!("\n6. 函数作为参数:");
@@ -75,12 +75,12 @@ fn hello_world() {
 
 // 带一个参数的函数
 fn greet(name: &str) {
-    println!("你好, {}!", name);
+    println!("你好, {name}!");
 }
 
 // 带多个参数的函数
 fn print_labeled_measurement(value: i32, unit_label: char) {
-    println!("测量值是: {}{}", value, unit_label);
+    println!("测量值是: {value}{unit_label}");
 }
 
 // 返回值的函数
@@ -104,7 +104,7 @@ fn multiply(a: i32, b: i32) -> i32 {
 // 高阶函数：接受函数作为参数
 fn apply_operation(x: i32, y: i32, op: fn(i32, i32) -> i32) {
     let result = op(x, y);
-    println!("操作结果: {}", result);
+    println!("操作结果: {result}");
 }
 
 // 带条件返回的函数

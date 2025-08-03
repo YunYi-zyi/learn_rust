@@ -50,7 +50,7 @@ fn show_menu() {
     println!("{}", "-".repeat(50));
 
     for (number, description) in exercises::EXERCISES {
-        println!("  {} - {}", number, description);
+        println!("  {number} - {description}");
     }
 
     println!("\n📋 特殊选项 (Special Options):");
@@ -65,12 +65,12 @@ fn run_all_exercises() {
     println!("{}", "=".repeat(60));
 
     for (number, description) in exercises::EXERCISES {
-        println!("\n📍 开始练习 {} - {}", number, description);
+        println!("\n📍 开始练习 {number} - {description}");
         println!("{}", "-".repeat(40));
 
         exercises::run_exercise(number);
 
-        println!("\n✅ 练习 {} 完成", number);
+        println!("\n✅ 练习 {number} 完成");
         println!("{}", "-".repeat(40));
 
         // 在练习之间稍作停顿

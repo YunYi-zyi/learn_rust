@@ -6,7 +6,7 @@ pub fn run() {
     println!("\n1. 基本 if 语句:");
     let number = 5;
     if number < 10 {
-        println!("{} 小于 10", number);
+        println!("{number} 小于 10");
     }
 
     // 2. if-else 语句
@@ -32,13 +32,13 @@ pub fn run() {
     } else {
         "F"
     };
-    println!("分数 {} 对应等级: {}", score, grade);
+    println!("分数 {score} 对应等级: {grade}");
 
     // 4. if 在 let 语句中
     println!("\n4. if 在 let 语句中:");
     let condition = true;
     let number = if condition { 5 } else { 6 };
-    println!("根据条件选择的数字: {}", number);
+    println!("根据条件选择的数字: {number}");
 
     // 5. 逻辑运算符
     println!("\n5. 逻辑运算符:");
@@ -91,15 +91,15 @@ pub fn run() {
         "一元" => 1.00,
         _ => 0.0, // 默认情况
     };
-    println!("{} 硬币的价值: {} 元", coin, value);
+    println!("{coin} 硬币的价值: {value} 元");
 
     // 8. match 与数字
     println!("\n8. match 与数字:");
     let number = 13;
     match number {
         1 => println!("一"),
-        2 | 3 | 5 | 7 | 11 | 13 => println!("{} 是一个小的质数", number),
-        13..=19 => println!("{} 是青少年数字", number),
+        2 | 3 | 5 | 7 | 11 | 13 => println!("{number} 是一个小的质数"),
+        13..=19 => println!("{number} 是青少年数字"),
         _ => println!("不是特殊数字"),
     }
 
@@ -107,9 +107,9 @@ pub fn run() {
     println!("\n9. match 绑定值:");
     let point = (0, 5);
     match point {
-        (0, y) => println!("在 y 轴上的点，y = {}", y),
-        (x, 0) => println!("在 x 轴上的点，x = {}", x),
-        (x, y) => println!("点的坐标: ({}, {})", x, y),
+        (0, y) => println!("在 y 轴上的点，y = {y}"),
+        (x, 0) => println!("在 x 轴上的点，x = {x}"),
+        (x, y) => println!("点的坐标: ({x}, {y})"),
     }
 
     // 10. if let 语法糖
@@ -119,7 +119,7 @@ pub fn run() {
     let age: Result<u8, _> = "34".parse();
 
     if let Some(color) = favorite_color {
-        println!("使用你最喜欢的颜色 {} 作为背景", color);
+        println!("使用你最喜欢的颜色 {color} 作为背景");
     } else if is_tuesday {
         println!("星期二是绿色的日子！");
     } else if let Ok(age) = age {
@@ -140,7 +140,7 @@ pub fn run() {
     stack.push(3);
 
     while let Some(top) = stack.pop() {
-        println!("弹出: {}", top);
+        println!("弹出: {top}");
     }
 
     // 12. 条件表达式的复杂示例
@@ -154,7 +154,7 @@ pub fn run() {
 
 // 辅助函数：检查数字的各种属性
 fn check_number(num: i32) {
-    println!("\n检查数字: {}", num);
+    println!("\n检查数字: {num}");
 
     // 正负性
     let sign = if num > 0 {
@@ -176,9 +176,9 @@ fn check_number(num: i32) {
         _ => "大",
     };
 
-    println!("  {} 是一个{}的{}", num, size, sign);
+    println!("  {num} 是一个{size}的{sign}");
     if num != 0 {
-        println!("  它是{}", parity);
+        println!("  它是{parity}");
     }
 
     // 特殊数字判断

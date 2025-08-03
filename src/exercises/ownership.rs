@@ -31,8 +31,8 @@ pub fn run() {
         // `first_word` 适用于字符串字面值，部分或全部
         let word = first_word(&my_string_literal[0..6]);
         println!("Now word is {word}, it is from a &str but not String");
-        let word = first_word(&my_string_literal[..]);
-        println!("Now word is {word}, it is from a &str but not String");
+        // let word = first_word(&my_string_literal[..]);
+        // println!("Now word is {word}, it is from a &str but not String");
 
         // 因为字符串字面值已经 **是** 字符串 slice 了，
         // 这也是适用的，无需 slice 语法！
@@ -40,8 +40,8 @@ pub fn run() {
         println!("Now word is {word}, no need for '&',because &str can be a slice");
     }
 }
-
-fn calculate_length(s: &String) -> usize {
+// fn calculate_length(s: &String) -> usize {
+fn calculate_length(s: &str) -> usize {
     s.len()
 }
 
@@ -58,5 +58,6 @@ fn first_word(s: &str) -> &str {
         }
     }
 
-    &s[..]
+    s
+    // &s[..]
 }
