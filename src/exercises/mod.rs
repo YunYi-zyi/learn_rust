@@ -8,6 +8,7 @@ pub mod ownership;
 pub mod strings;
 pub mod structlearn;
 pub mod variables;
+pub mod vect;
 
 // 导出所有练习的运行函数
 pub use conditionals::run as run_conditionals;
@@ -19,6 +20,7 @@ pub use ownership::run as run_ownership;
 pub use strings::run as run_strings;
 pub use structlearn::run as run_struct;
 pub use variables::run as run_variables;
+pub use vect::run as run_vector;
 
 // 练习列表，用于菜单显示
 pub const EXERCISES: &[(&str, &str)] = &[
@@ -31,6 +33,7 @@ pub const EXERCISES: &[(&str, &str)] = &[
     ("7", "结构体(struct)"),
     ("8", "枚举 (Enums)"),
     ("9", "模式匹配 (Pattern Matching)"),
+    ("10", "向量 (Vectors)"),
 ];
 
 // 根据选择运行对应的练习
@@ -70,6 +73,10 @@ pub fn run_exercise(choice: &str) -> bool {
         }
         "9" => {
             run_match();
+            true
+        }
+        "10" => {
+            run_vector();
             true
         }
         _ => false,

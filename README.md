@@ -71,6 +71,9 @@ cargo test
 | 5    | 条件语句 (Conditionals)            | `src/exercises/conditionals.rs` | ✅   |
 | 6    | 所有权（Ownership）                | `src/exercises/ownership.rs`    | ✅   |
 | 7    | 结构体 (Structs)                   | `src/exercises/structlearn.rs`  | ✅   |
+| 8    | 枚举（Enums）                      | `src/exercises/enums.rs`        | ✅   |
+| 9    | 模式匹配（Pattern Matching）       | `src/exercises/matchln.rs`      | ✅   |
+| 10   | 向量（Vector）                     | `src/exercises/vect.rs`         | ✅   |
 
 ## ➕ 如何添加新练习
 
